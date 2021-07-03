@@ -11,6 +11,7 @@ WORKDIR .
 ENV PYTHONUNBUFFERED=1
 COPY requirements.txt .
 COPY startup.sh .
+COPY start.sh .
 RUN bash startup.sh
 COPY . .
-CMD ["python3", "-m", "main_startup"]
+CMD ["bash", "start.sh"]
