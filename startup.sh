@@ -18,11 +18,13 @@ update_and_install_packages () {
     apt -qq update -y
     apt -qq install -y --no-install-recommends \
         git \
+        nodejs \
         ffmpeg \
         mediainfo \
         unzip \
         wget \
-        gifsicle 
+        gifsicle
+    npm install http-server -g
   }
   
 # Thanks To Userge For The Chrome Version Hecks  
